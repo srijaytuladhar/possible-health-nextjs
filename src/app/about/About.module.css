@@ -1,0 +1,102 @@
+.container {
+  min-height: 100vh;
+}
+
+.header {
+  background-color: var(--secondary);
+  color: white;
+  padding: 10rem 0 5rem;
+  text-align: center;
+}
+
+.title {
+  font-size: clamp(2.5rem, 6vw, 4rem);
+  margin-bottom: 1rem;
+}
+
+.subtitle {
+  font-size: 1.25rem;
+  opacity: 0.8;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 5rem;
+  align-items: center;
+}
+
+.imagePlaceholder {
+  width: 100%;
+  aspect-ratio: 1/1;
+  background-color: var(--primary-light);
+  border-radius: 20px;
+}
+
+.text {
+  color: var(--muted);
+  margin-top: 1.5rem;
+  font-size: 1.1rem;
+}
+
+.visionSection {
+  background-color: #f9f9f9;
+}
+
+.visionGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3rem;
+}
+
+.visionCard {
+  background-color: white;
+  padding: 3rem;
+  border-radius: 20px;
+  box-shadow: var(--shadow);
+  border-bottom: 4px solid var(--primary);
+}
+
+.visionCard h3 {
+  font-size: 1.8rem;
+  margin-bottom: 1rem;
+  color: var(--secondary);
+}
+
+.sectionHeader {
+  text-align: center;
+  margin-bottom: 4rem;
+}
+
+.teamGrid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 2.5rem;
+}
+
+.teamCard {
+  text-align: center;
+}
+
+.teamImg {
+  width: 100%;
+  aspect-ratio: 1/1;
+  background-color: #eee;
+  border-radius: 50%;
+  margin-bottom: 1.5rem;
+}
+
+@media (max-width: 992px) {
+  .grid, .visionGrid, .teamGrid {
+    grid-template-columns: 1fr 1fr;
+    gap: 3rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .grid, .visionGrid, .teamGrid {
+    grid-template-columns: 1fr;
+  }
+}
