@@ -53,7 +53,7 @@ const AboutPage = () => {
         </div>
       </section>
 
-      {/* Team Section Placeholder */}
+      {/* Team Section */}
       <section className="section-padding">
         <div className="container">
           <div className={styles.sectionHeader}>
@@ -61,11 +61,34 @@ const AboutPage = () => {
             <p>Guided by experts with decades of experience in global development.</p>
           </div>
           <div className={styles.teamGrid}>
-            {[1, 2, 3, 4].map((member) => (
-              <div key={member} className={styles.teamCard}>
-                <div className={styles.teamImg}></div>
-                <h4>Team Member {member}</h4>
-                <p>Position Title</p>
+            {[
+              { 
+                name: 'Sarah Johnson', 
+                role: 'Executive Director', 
+                img: '/images/team/member1.png' 
+              },
+              { 
+                name: 'Michael Chen', 
+                role: 'Director of Operations', 
+                img: '/images/team/member2.png' 
+              },
+              { 
+                name: 'Emily Davis', 
+                role: 'Head of Programs', 
+                img: '/images/team/member3.png' 
+              },
+              { 
+                name: 'Robert Wilson', 
+                role: 'Medical Outreach Lead', 
+                img: '/images/team/member4.png' 
+              },
+            ].map((member, index) => (
+              <div key={index} className={styles.teamCard}>
+                <div className={styles.teamImgWrapper}>
+                  <img src={member.img} alt={member.name} className={styles.teamImg} />
+                </div>
+                <h4>{member.name}</h4>
+                <p>{member.role}</p>
               </div>
             ))}
           </div>

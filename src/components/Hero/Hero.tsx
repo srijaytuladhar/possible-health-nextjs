@@ -13,7 +13,7 @@ const Hero = () => {
         playsInline
         poster="/hero-poster.png"
       >
-        <source src="https://interactive-examples.mdn.mozilla.net/media/cc0-videos/flower.mp4" type="video/mp4" />
+        <source src="/videos/video.mp4" type="video/mp4" />
         Your browser does not support the video tag.
       </video>
       

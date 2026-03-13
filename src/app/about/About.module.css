@@ -87,12 +87,26 @@
   text-align: center;
 }
 
-.teamImg {
+.teamImgWrapper {
   width: 100%;
   aspect-ratio: 1/1;
   background-color: #eee;
   border-radius: 50%;
   margin-bottom: 1.5rem;
+  overflow: hidden;
+  box-shadow: var(--shadow);
+  transition: transform 0.3s ease;
+}
+
+.teamCard:hover .teamImgWrapper {
+  transform: translateY(-5px);
+  box-shadow: var(--shadow-lg);
+}
+
+.teamImg {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
 @media (max-width: 992px) {
