@@ -3,11 +3,11 @@ import SchemaMarkup from "@/components/SEO/SchemaMarkup";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  metadataBase: new URL('https://ngoheart.org'),
-  title: "Empowering Communities | Leading Health & Education NGO",
+  metadataBase: new URL('https://possiblehealth.org'),
+  title: "Possible Health | Leading Health & Education NGO",
   description: "Join our mission to empower communities through sustainable health, education, and development programs worldwide.",
   openGraph: {
-    title: "Empowering Communities | NGO",
+    title: "Possible Health | NGO",
     description: "Building better lives through community empowerment.",
     images: ["/og-image.png"],
   },

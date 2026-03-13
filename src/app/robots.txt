@@ -2,4 +2,4 @@ User-agent: *
 Allow: /
 Disallow: /api/
 
-Sitemap: https://ngoheart.org/sitemap.xml
+Sitemap: https://possiblehealth.org/sitemap.xml

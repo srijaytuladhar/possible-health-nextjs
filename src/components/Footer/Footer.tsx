@@ -9,7 +9,7 @@ const Footer = () => {
       <div className={`container ${styles.grid}`}>
         <div className={styles.info}>
           <Link href="/" className={styles.logo}>
-            <span className="pink-text">NGO</span>Heart
+            <span className="pink-text">Possible</span>Health
           </Link>
           <p className={styles.description}>
             Empowering communities through sustainable health, education, and development programs worldwide since 2010.
@@ -45,7 +45,7 @@ const Footer = () => {
 
       <div className={styles.bottom}>
         <div className="container">
-          <p>&copy; {new Date().getFullYear()} NGO Heart. Made with <Heart size={16} className="pink-text" fill="#E91E63" /> for a better world.</p>
+          <p>&copy; {new Date().getFullYear()} Possible Health. Made with <Heart size={16} className="pink-text" fill="#E91E63" /> for a better world.</p>
         </div>
       </div>
     </footer>

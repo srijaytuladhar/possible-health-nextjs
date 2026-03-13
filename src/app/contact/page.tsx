@@ -28,7 +28,7 @@ const ContactPage = () => {
                   <div className={styles.icon}><Mail size={24} /></div>
                   <div>
                     <h4>Email Us</h4>
-                    <p>info@ngoheart.org</p>
+                    <p>info@possiblehealth.org</p>
                   </div>
                 </div>
                 <div className={styles.infoItem}>

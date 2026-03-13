@@ -10,7 +10,7 @@ const Mission = () => {
             <span className={styles.tagline}>Our Mission</span>
             <h2 className={styles.title}>Dedicated to Creating a <span className="pink-text">Better World</span> for Everyone</h2>
             <p className={styles.text}>
-              At NGO Heart, we believe that every individual deserves access to basic human rights: health, education, and the opportunity to thrive. Our mission is to bridge the gap between resources and need.
+              At Possible Health, we believe that every individual deserves access to basic human rights: health, education, and the opportunity to thrive. Our mission is to bridge the gap between resources and need.
             </p>
             <div className={styles.values}>
               <div className={styles.valueItem}>

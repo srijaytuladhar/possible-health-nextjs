@@ -11,7 +11,7 @@ const AboutPage = () => {
       {/* Page Header */}
       <section className={styles.header}>
         <div className="container">
-          <h1 className={styles.title}>About <span className="pink-text">NGO Heart</span></h1>
+          <h1 className={styles.title}>About <span className="pink-text">Possible Health</span></h1>
           <p className={styles.subtitle}>Empowering communities through sustainable development since 2010.</p>
         </div>
       </section>
@@ -27,7 +27,7 @@ const AboutPage = () => {
               <span className="pink-text tagline">Our Story</span>
               <h2>How We <span className="pink-text">Started</span></h2>
               <p className={styles.text}>
-                Founded by a group of passionate humanitarian workers, NGO Heart was born out of a simple vision: to create a world where everyone has the tools to succeed. Starting with a small health clinic in 2010, we have grown into a global organization impacting millions of lives.
+                Founded by a group of passionate humanitarian workers, Possible Health was born out of a simple vision: to create a world where everyone has the tools to succeed. Starting with a small health clinic in 2010, we have grown into a global organization impacting millions of lives.
               </p>
               <p className={styles.text}>
                 Today, we operate in over 12 countries, focusing on sustainable solutions that empower locals and foster long-term growth.

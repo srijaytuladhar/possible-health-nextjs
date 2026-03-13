@@ -34,7 +34,7 @@ const Navbar = () => {
     <nav className={`${styles.navbar} ${isScrolled ? styles.scrolled : ''}`}>
       <div className={`container ${styles.navContainer}`}>
         <Link href="/" className={styles.logo}>
-          <span className="pink-text">NGO</span>Heart
+          <span className="pink-text">Possible</span>Health
         </Link>
 
         {/* Desktop Menu */}

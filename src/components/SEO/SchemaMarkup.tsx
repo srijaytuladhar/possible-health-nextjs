@@ -4,9 +4,9 @@ const SchemaMarkup = () => {
   const schema = {
     "@context": "https://schema.org",
     "@type": "NGO",
-    "name": "NGO Heart",
-    "url": "https://ngoheart.org",
-    "logo": "https://ngoheart.org/logo.png",
+    "name": "Possible Health",
+    "url": "https://possiblehealth.org",
+    "logo": "https://possiblehealth.org/logo.png",
     "description": "Empowering communities through sustainable health, education, and development programs worldwide.",
     "contactPoint": {
       "@type": "ContactPoint",
@@ -16,9 +16,9 @@ const SchemaMarkup = () => {
       "availableLanguage": "English"
     },
     "sameAs": [
-      "https://facebook.com/ngoheart",
-      "https://twitter.com/ngoheart",
-      "https://instagram.com/ngoheart"
+      "https://facebook.com/possiblehealth",
+      "https://twitter.com/possiblehealth",
+      "https://instagram.com/possiblehealth"
     ]
   };
 

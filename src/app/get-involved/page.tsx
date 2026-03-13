@@ -53,7 +53,7 @@ const GetInvolvedPage = () => {
               <div className={styles.infoCard}>
                 <h3>Partnerships</h3>
                 <p>Are you an organization looking to collaborate? We partner with NGOs, corporations, and governments to scale impact.</p>
-                <a href="mailto:partners@ngoheart.org" className="pink-text font-bold">partners@ngoheart.org</a>
+                <a href="mailto:partners@possiblehealth.org" className="pink-text font-bold">partners@possiblehealth.org</a>
               </div>
               
               <div className={styles.infoCard}>
