@@ -25,7 +25,7 @@ const Mission = () => {
           </div>
           <div className={styles.imageWrapper}>
             <div className={styles.imagePlaceholder}>
-              {/* This would be an Image component in a real app */}
+              <img src="/mission.png" alt="NGO Mission" className={styles.mainImg} />
               <div className={styles.experienceBox}>
                 <span className={styles.expNum}>15+</span>
                 <span className={styles.expText}>Years of Service</span>

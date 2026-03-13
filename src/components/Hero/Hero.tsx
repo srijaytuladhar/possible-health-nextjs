@@ -11,9 +11,9 @@ const Hero = () => {
         muted 
         loop 
         playsInline
-        poster="/hero-poster.jpg"
+        poster="/hero-poster.png"
       >
-        <source src="https://assets.mixkit.co/videos/preview/mixkit-african-children-smiling-at-the-camera-medium-shot-40019-large.mp4" type="video/mp4" />
+        <source src="https://interactive-examples.mdn.mozilla.net/media/cc0-videos/flower.mp4" type="video/mp4" />
         Your browser does not support the video tag.
       </video>
       

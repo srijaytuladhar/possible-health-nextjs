@@ -9,19 +9,19 @@ const Programs = () => {
       title: 'Health for All',
       description: 'Providing essential medical care and supplies to remote areas.',
       impact: '500K+ Treated',
-      image: '/program-health.jpg'
+      image: '/program-health.png'
     },
     {
       title: 'Education First',
       description: 'Building schools and providing scholarships to underprivileged children.',
       impact: '200+ Schools Built',
-      image: '/program-education.jpg'
+      image: '/program-education.png'
     },
     {
       title: 'Clean Water',
       description: 'Installing sustainable water filtration systems in communities.',
       impact: '1M+ Access to Water',
-      image: '/program-water.jpg'
+      image: '/program-water.png'
     }
   ];
 
@@ -41,7 +41,9 @@ const Programs = () => {
         <div className={styles.grid}>
           {programs.map((program, index) => (
             <div key={index} className={styles.card}>
-              <div className={styles.imagePlaceholder}></div>
+              <div className={styles.imagePlaceholder}>
+                <img src={program.image} alt={program.title} className={styles.cardImg} />
+              </div>
               <div className={styles.content}>
                 <h3>{program.title}</h3>
                 <p>{program.description}</p>

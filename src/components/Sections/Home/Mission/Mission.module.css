@@ -52,6 +52,13 @@
   background-color: var(--primary-light);
   border-radius: 20px;
   position: relative;
+  overflow: hidden;
+}
+
+.mainImg {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
 .experienceBox {

@@ -9,7 +9,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Empowering Communities | NGO",
     description: "Building better lives through community empowerment.",
-    images: ["/og-image.jpg"],
+    images: ["/og-image.png"],
   },
 };
 

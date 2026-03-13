@@ -20,7 +20,9 @@ const AboutPage = () => {
       <section className="section-padding">
         <div className="container">
           <div className={styles.grid}>
-            <div className={styles.imagePlaceholder}></div>
+            <div className={styles.imagePlaceholder}>
+              <img src="/about-story.png" alt="Our Story" className={styles.storyImg} />
+            </div>
             <div className={styles.content}>
               <span className="pink-text tagline">Our Story</span>
               <h2>How We <span className="pink-text">Started</span></h2>
