@@ -4,11 +4,11 @@ import "./globals.css";
 
 export const metadata: Metadata = {
   metadataBase: new URL('https://possiblehealth.org'),
-  title: "Possible Health | Leading Health & Education NGO",
-  description: "Join our mission to empower communities through sustainable health, education, and development programs worldwide.",
+  title: "Possible Health | Community Health Innovation in Nepal",
+  description: "Possible reduces suffering and improves lives by co-designing, testing, and scaling solutions that strengthen community care systems in Nepal and beyond.",
   openGraph: {
-    title: "Possible Health | NGO",
-    description: "Building better lives through community empowerment.",
+    title: "Possible Health | Health Innovation Rooted in Community",
+    description: "Community-based health innovation — researching and scaling mental health, chronic disease, and primary care solutions in Nepal.",
     images: ["/og-image.png"],
   },
 };

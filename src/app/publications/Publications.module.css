@@ -1,0 +1,158 @@
+.container {
+  min-height: 100vh;
+}
+
+.header {
+  background: linear-gradient(135deg, var(--secondary) 0%, #0D2B6B 100%);
+  color: white;
+  padding: 10rem 0 5rem;
+  text-align: center;
+}
+
+.badge {
+  display: inline-block;
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  background: rgba(255,255,255,0.12);
+  border: 1px solid rgba(255,255,255,0.2);
+  color: rgba(255,255,255,0.9);
+  padding: 0.4rem 1.2rem;
+  border-radius: 50px;
+  margin-bottom: 1.25rem;
+}
+
+.title {
+  font-size: clamp(2.5rem, 6vw, 4rem);
+  color: white;
+  margin-bottom: 1rem;
+}
+
+.highlight {
+  color: #90CAF9;
+}
+
+.subtitle {
+  font-size: 1.1rem;
+  opacity: 0.8;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.pubSection {
+  background: var(--surface);
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
+  gap: 1.5rem;
+}
+
+.card {
+  background: white;
+  border-radius: 16px;
+  padding: 1.75rem;
+  box-shadow: var(--shadow-card);
+  border: 1px solid var(--border);
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  transition: var(--transition);
+}
+
+.card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-lg);
+  border-color: rgba(21, 101, 192, 0.2);
+}
+
+.cardTop {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.fileIcon {
+  color: var(--muted);
+  opacity: 0.6;
+}
+
+.typeTag {
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.07em;
+  text-transform: uppercase;
+  padding: 0.25rem 0.75rem;
+  border-radius: 50px;
+}
+
+.tagBlue { background: var(--primary-light); color: var(--primary); }
+.tagPurple { background: #F3E5F5; color: #7B1FA2; }
+.tagTeal { background: #E0F7FA; color: var(--teal); }
+.tagGreen { background: var(--accent-light); color: var(--accent); }
+.tagOrange { background: #FFF3E0; color: #E65100; }
+
+.pubTitle {
+  font-size: 0.97rem;
+  font-weight: 700;
+  line-height: 1.5;
+  flex: 1;
+}
+
+.authors {
+  font-size: 0.82rem;
+  color: var(--muted);
+  font-style: italic;
+}
+
+.cardFooter {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-top: 1px solid var(--border);
+  padding-top: 0.75rem;
+  margin-top: auto;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+}
+
+.meta {
+  display: flex;
+  flex-direction: column;
+  gap: 0.1rem;
+}
+
+.journal {
+  font-size: 0.82rem;
+  color: var(--secondary);
+  font-weight: 500;
+}
+
+.year {
+  font-size: 0.78rem;
+  color: var(--muted);
+}
+
+.readLink {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  font-size: 0.82rem;
+  font-weight: 600;
+  color: var(--primary);
+  transition: var(--transition);
+  white-space: nowrap;
+}
+
+.readLink:hover {
+  color: var(--primary-hover);
+  gap: 0.5rem;
+}
+
+@media (max-width: 640px) {
+  .grid {
+    grid-template-columns: 1fr;
+  }
+}

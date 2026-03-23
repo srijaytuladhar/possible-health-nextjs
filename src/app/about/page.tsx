@@ -1,97 +1,136 @@
+'use client';
+
 import React from 'react';
+import { motion } from 'framer-motion';
 import Navbar from '@/components/Navbar/Navbar';
 import Footer from '@/components/Footer/Footer';
+import { ArrowRight } from 'lucide-react';
+import Link from 'next/link';
 import styles from './About.module.css';
 
 const AboutPage = () => {
   return (
     <main className={styles.container}>
       <Navbar />
-      
-      {/* Page Header */}
+
+      {/* Header */}
       <section className={styles.header}>
         <div className="container">
-          <h1 className={styles.title}>About <span className="pink-text">Possible Health</span></h1>
-          <p className={styles.subtitle}>Empowering communities through sustainable development since 2010.</p>
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.7 }}
+          >
+            <h1 className={styles.title}>
+              About <span className={styles.highlight}>Possible</span>
+            </h1>
+            <p className={styles.subtitle}>
+              Health innovation rooted in community, context, and evidence — since our founding in Nepal.
+            </p>
+          </motion.div>
         </div>
       </section>
 
-      {/* Story Section */}
+      {/* Story */}
       <section className="section-padding">
         <div className="container">
-          <div className={styles.grid}>
-            <div className={styles.imagePlaceholder}>
-              <img src="/about-story.png" alt="Our Story" className={styles.storyImg} />
-            </div>
-            <div className={styles.content}>
-              <span className="pink-text tagline">Our Story</span>
-              <h2>How We <span className="pink-text">Started</span></h2>
-              <p className={styles.text}>
-                Founded by a group of passionate humanitarian workers, Possible Health was born out of a simple vision: to create a world where everyone has the tools to succeed. Starting with a small health clinic in 2010, we have grown into a global organization impacting millions of lives.
+          <div className={styles.storyGrid}>
+            <motion.div
+              className={styles.imageBox}
+              initial={{ opacity: 0, x: -30 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.7 }}
+              viewport={{ once: true }}
+            >
+              <img src="/about-story.png" alt="Possible Health founders in Nepal" className={styles.img} />
+              <div className={styles.imgBadge}>Founded with communities</div>
+            </motion.div>
+
+            <motion.div
+              className={styles.storyContent}
+              initial={{ opacity: 0, x: 30 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.7 }}
+              viewport={{ once: true }}
+            >
+              <span className="section-label">Our Story</span>
+              <h2>Born in Nepal&apos;s Hills, <br />Built for the World</h2>
+              <p>
+                Possible began with a simple question: what would healthcare look like if communities
+                were at the center? Starting in the remote districts of western Nepal, our founders
+                worked alongside government health workers to understand what was truly needed — and
+                what was not.
               </p>
-              <p className={styles.text}>
-                Today, we operate in over 12 countries, focusing on sustainable solutions that empower locals and foster long-term growth.
+              <p>
+                Over time, that community-first approach became our north star. We now work across
+                multiple districts in Nepal, partnering with the Ministry of Health, international
+                research institutions, and most importantly — communities themselves.
               </p>
-            </div>
+              <p>
+                Today, Possible operates as two complementary organizations: Sambhav (Possible-Nepal)
+                based in Kathmandu, and Possible-US based in New York — united by a single mission.
+              </p>
+              <Link href="/programs" className="btn btn-primary" style={{ marginTop: '1rem', display: 'inline-flex', gap: '0.5rem' }}>
+                See Our Solutions <ArrowRight size={18} />
+              </Link>
+            </motion.div>
           </div>
         </div>
       </section>
 
-      {/* Vision & Mission Row */}
-      <section className={`section-padding ${styles.visionSection}`}>
+      {/* Vision & Mission */}
+      <section className={`section-padding ${styles.vmSection}`}>
         <div className="container">
-          <div className={styles.visionGrid}>
-            <div className={styles.visionCard}>
+          <div className={styles.vmGrid}>
+            <motion.div
+              className={styles.vmCard}
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6 }}
+              viewport={{ once: true }}
+            >
               <h3>Our Vision</h3>
-              <p>A world where every community is self-reliant and every individual lives in dignity and health.</p>
-            </div>
-            <div className={styles.visionCard}>
+              <p>
+                A world where everyone, everywhere, has access to high-quality health care rooted in
+                community, context, and evidence.
+              </p>
+            </motion.div>
+            <motion.div
+              className={`${styles.vmCard} ${styles.vmAccent}`}
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.15 }}
+              viewport={{ once: true }}
+            >
               <h3>Our Mission</h3>
-              <p>To implement sustainable programs in health, education, and livelihood that transform lives across borders.</p>
-            </div>
+              <p>
+                We reduce suffering and improve lives by co-designing, testing, and scaling solutions
+                that strengthen community care systems.
+              </p>
+            </motion.div>
           </div>
         </div>
       </section>
 
-      {/* Team Section */}
+      {/* Team teaser */}
       <section className="section-padding">
         <div className="container">
-          <div className={styles.sectionHeader}>
-            <h2 className="title">Our Leadership Team</h2>
-            <p>Guided by experts with decades of experience in global development.</p>
-          </div>
-          <div className={styles.teamGrid}>
-            {[
-              { 
-                name: 'Sarah Johnson', 
-                role: 'Executive Director', 
-                img: '/images/team/member1.png' 
-              },
-              { 
-                name: 'Michael Chen', 
-                role: 'Director of Operations', 
-                img: '/images/team/member2.png' 
-              },
-              { 
-                name: 'Emily Davis', 
-                role: 'Head of Programs', 
-                img: '/images/team/member3.png' 
-              },
-              { 
-                name: 'Robert Wilson', 
-                role: 'Medical Outreach Lead', 
-                img: '/images/team/member4.png' 
-              },
-            ].map((member, index) => (
-              <div key={index} className={styles.teamCard}>
-                <div className={styles.teamImgWrapper}>
-                  <img src={member.img} alt={member.name} className={styles.teamImg} />
-                </div>
-                <h4>{member.name}</h4>
-                <p>{member.role}</p>
-              </div>
-            ))}
-          </div>
+          <motion.div
+            className={styles.teamTeaser}
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
+            viewport={{ once: true }}
+          >
+            <h2>Meet Our Team</h2>
+            <p>
+              We are a multidisciplinary team of health workers, researchers, engineers, clinicians,
+              and advocates working across Nepal and the United States.
+            </p>
+            <Link href="/team" className="btn btn-primary">
+              View Team <ArrowRight size={18} />
+            </Link>
+          </motion.div>
         </div>
       </section>
 

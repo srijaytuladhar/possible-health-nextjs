@@ -1,0 +1,82 @@
+.section {
+  background: var(--surface);
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+}
+
+.card {
+  background: white;
+  border-radius: 20px;
+  padding: 2.5rem;
+  box-shadow: var(--shadow-card);
+  border: 1px solid var(--border);
+  position: relative;
+  overflow: hidden;
+  transition: var(--transition);
+}
+
+.card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: linear-gradient(90deg, var(--primary), #42A5F5);
+}
+
+.cardAccent::before {
+  background: linear-gradient(90deg, var(--accent), #66BB6A);
+}
+
+.card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-lg);
+}
+
+.iconWrap {
+  width: 56px;
+  height: 56px;
+  background: var(--primary-light);
+  color: var(--primary);
+  border-radius: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 1.25rem;
+}
+
+.iconAccent {
+  background: var(--accent-light);
+  color: var(--accent);
+}
+
+.label {
+  display: block;
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--primary);
+  margin-bottom: 0.75rem;
+}
+
+.cardAccent .label {
+  color: var(--accent);
+}
+
+.text {
+  font-size: 1.05rem;
+  line-height: 1.8;
+  color: var(--muted);
+}
+
+@media (max-width: 768px) {
+  .grid {
+    grid-template-columns: 1fr;
+  }
+}

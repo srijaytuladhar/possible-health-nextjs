@@ -1,0 +1,115 @@
+.section {
+  background: var(--surface);
+}
+
+.header {
+  text-align: center;
+  max-width: 700px;
+  margin: 0 auto 3.5rem;
+}
+
+.title {
+  font-size: clamp(1.75rem, 3.5vw, 2.5rem);
+  margin-bottom: 1rem;
+  margin-top: 0.5rem;
+}
+
+.subtitle {
+  color: var(--muted);
+  font-size: 1.05rem;
+  line-height: 1.7;
+}
+
+.steps {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+  margin-bottom: 3rem;
+}
+
+.card {
+  background: white;
+  border-radius: 20px;
+  padding: 2rem 1.75rem;
+  box-shadow: var(--shadow-card);
+  border: 1px solid var(--border);
+  position: relative;
+  overflow: hidden;
+  transition: var(--transition);
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: var(--shadow-lg);
+}
+
+.card::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+}
+
+.blue::after { background: linear-gradient(90deg, var(--primary), #42A5F5); }
+.teal::after { background: linear-gradient(90deg, var(--teal), #26C6DA); }
+.green::after { background: linear-gradient(90deg, var(--accent), #66BB6A); }
+
+.stepNum {
+  font-family: var(--font-heading);
+  font-size: 3.5rem;
+  font-weight: 800;
+  color: rgba(21, 101, 192, 0.07);
+  position: absolute;
+  top: 0.75rem;
+  right: 1.25rem;
+  line-height: 1;
+}
+
+.iconWrap {
+  width: 54px;
+  height: 54px;
+  border-radius: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 1.25rem;
+  background: var(--primary-light);
+  color: var(--primary);
+}
+
+.blue .iconWrap { background: var(--primary-light); color: var(--primary); }
+.teal .iconWrap { background: #E0F7FA; color: var(--teal); }
+.green .iconWrap { background: var(--accent-light); color: var(--accent); }
+
+.stepTitle {
+  font-size: 1.25rem;
+  margin-bottom: 0.75rem;
+}
+
+.stepDesc {
+  color: var(--muted);
+  font-size: 0.95rem;
+  line-height: 1.7;
+}
+
+.partnerNote {
+  text-align: center;
+  color: var(--muted);
+  font-size: 1rem;
+  line-height: 1.75;
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 1.5rem 2rem;
+  background: white;
+  border-radius: 16px;
+  border: 1px solid var(--border);
+  box-shadow: var(--shadow-card);
+}
+
+@media (max-width: 900px) {
+  .steps {
+    grid-template-columns: 1fr;
+  }
+}

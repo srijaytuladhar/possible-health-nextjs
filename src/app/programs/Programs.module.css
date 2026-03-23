@@ -2,57 +2,298 @@
   min-height: 100vh;
 }
 
+/* Header */
 .header {
-  background-color: var(--secondary);
+  background: linear-gradient(135deg, var(--secondary) 0%, #0D2B6B 100%);
   color: white;
   padding: 10rem 0 5rem;
   text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.header::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: url('/mission.png') center/cover no-repeat;
+  opacity: 0.08;
+}
+
+.badge {
+  display: inline-block;
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  background: rgba(255,255,255,0.12);
+  border: 1px solid rgba(255,255,255,0.2);
+  color: rgba(255,255,255,0.9);
+  padding: 0.4rem 1.2rem;
+  border-radius: 50px;
+  margin-bottom: 1.25rem;
 }
 
 .title {
   font-size: clamp(2.5rem, 6vw, 4rem);
   margin-bottom: 1rem;
+  color: white;
+}
+
+.highlight {
+  color: #90CAF9;
 }
 
 .subtitle {
-  font-size: 1.25rem;
+  font-size: clamp(1rem, 2.5vw, 1.2rem);
   opacity: 0.8;
+  max-width: 700px;
+  margin: 0 auto;
+  line-height: 1.7;
+}
+
+/* Solutions Grid */
+.solutionsSection {
+  background: var(--surface);
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
+  gap: 1.75rem;
+}
+
+.card {
+  background: white;
+  border-radius: 20px;
+  padding: 2rem;
+  box-shadow: var(--shadow-card);
+  border: 1px solid var(--border);
+  position: relative;
+  overflow: hidden;
+  transition: var(--transition);
+}
+
+.card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+}
+
+.blue::before { background: linear-gradient(90deg, var(--primary), #42A5F5); }
+.purple::before { background: linear-gradient(90deg, #7B1FA2, #CE93D8); }
+.teal::before { background: linear-gradient(90deg, var(--teal), #26C6DA); }
+.green::before { background: linear-gradient(90deg, var(--accent), #66BB6A); }
+.orange::before { background: linear-gradient(90deg, #E65100, #FFA726); }
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: var(--shadow-lg);
+}
+
+.cardTop {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 1rem;
+}
+
+.cardIcon {
+  font-size: 1.75rem;
+}
+
+.cardTag {
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--primary);
+  background: var(--primary-light);
+  padding: 0.3rem 0.8rem;
+  border-radius: 50px;
+}
+
+.purple .cardTag { color: #7B1FA2; background: #F3E5F5; }
+.teal .cardTag { color: var(--teal); background: #E0F7FA; }
+.green .cardTag { color: var(--accent); background: var(--accent-light); }
+.orange .cardTag { color: #E65100; background: #FFF3E0; }
+
+.cardTitle {
+  font-size: 1.05rem;
+  font-weight: 700;
+  margin-bottom: 0.75rem;
+  line-height: 1.4;
+}
+
+.cardDesc {
+  color: var(--muted);
+  font-size: 0.9rem;
+  line-height: 1.7;
+  margin-bottom: 1.25rem;
+}
+
+.cardMeta {
+  border-top: 1px solid var(--border);
+  padding-top: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.metaItem {
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+}
+
+.metaLabel {
+  font-size: 0.72rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--muted);
+}
+
+.metaValue {
+  font-size: 0.85rem;
+  color: var(--foreground);
+}
+
+.statusBadge {
+  display: inline-flex;
+  width: fit-content;
+  background: var(--accent-light);
+  color: var(--accent);
+  padding: 0.2rem 0.75rem;
+  border-radius: 50px;
+  font-weight: 600;
+  font-size: 0.8rem;
+}
+
+/* Presence */
+.presenceSection {
+  background: white;
+}
+
+.presenceHeader {
+  text-align: center;
+  margin-bottom: 2.5rem;
+}
+
+.presenceHeader h2 {
+  font-size: clamp(1.5rem, 3vw, 2.2rem);
+  margin-bottom: 0.75rem;
+  margin-top: 0.5rem;
+}
+
+.presenceHeader p {
+  color: var(--muted);
   max-width: 600px;
   margin: 0 auto;
 }
 
-.statsGrid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 2rem;
-  margin-top: -5rem;
-  position: relative;
-  z-index: 10;
+.presenceGrid {
+  display: flex;
+  justify-content: center;
 }
 
-.statCard {
-  background-color: var(--primary);
-  color: white;
+.mapPlaceholder {
+  background: var(--surface);
+  border-radius: 24px;
+  border: 2px dashed var(--border);
   padding: 3rem;
-  border-radius: 20px;
+  width: 100%;
+  max-width: 800px;
   text-align: center;
-  box-shadow: var(--shadow-lg);
 }
 
-.statCard h3 {
-  font-size: 3rem;
-  margin-bottom: 0.5rem;
+.mapInner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
 }
 
-.statCard p {
+.mapEmoji {
+  font-size: 4rem;
+}
+
+.mapInner p {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: var(--secondary);
+}
+
+.regionList {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.75rem;
+  margin-top: 0.5rem;
+}
+
+.regionTag {
+  background: var(--primary-light);
+  color: var(--primary);
+  padding: 0.4rem 1rem;
+  border-radius: 50px;
+  font-size: 0.85rem;
   font-weight: 500;
-  text-transform: uppercase;
-  letter-spacing: 1px;
 }
 
-@media (max-width: 768px) {
-  .statsGrid {
+/* Collaborators */
+.collabSection {
+  background: var(--surface);
+}
+
+.collabHeader {
+  text-align: center;
+  margin-bottom: 2.5rem;
+}
+
+.collabHeader h2 {
+  font-size: clamp(1.5rem, 3vw, 2.2rem);
+  margin-top: 0.5rem;
+}
+
+.collabGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 1rem;
+}
+
+.collabCard {
+  background: white;
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 1.1rem 1.25rem;
+  font-size: 0.88rem;
+  font-weight: 500;
+  color: var(--secondary);
+  text-align: center;
+  box-shadow: var(--shadow-card);
+  transition: var(--transition);
+}
+
+.collabCard:hover {
+  border-color: var(--primary);
+  color: var(--primary);
+  transform: translateY(-2px);
+  box-shadow: var(--shadow);
+}
+
+@media (max-width: 640px) {
+  .grid {
     grid-template-columns: 1fr;
-    margin-top: 2rem;
+  }
+
+  .collabGrid {
+    grid-template-columns: 1fr 1fr;
   }
 }

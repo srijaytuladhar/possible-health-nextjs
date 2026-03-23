@@ -3,7 +3,7 @@
 }
 
 .header {
-  background-color: var(--secondary);
+  background: linear-gradient(135deg, var(--secondary), #0D2B6B);
   color: white;
   padding: 10rem 0 5rem;
   text-align: center;
@@ -11,11 +11,16 @@
 
 .title {
   font-size: clamp(2.5rem, 6vw, 4rem);
+  color: white;
   margin-bottom: 1rem;
 }
 
+.highlight {
+  color: #90CAF9;
+}
+
 .subtitle {
-  font-size: 1.25rem;
+  font-size: 1.1rem;
   opacity: 0.8;
   max-width: 600px;
   margin: 0 auto;
@@ -24,107 +29,187 @@
 .grid {
   display: grid;
   grid-template-columns: 1fr 1.5fr;
-  gap: 5rem;
+  gap: 4rem;
+  align-items: start;
 }
 
-.contactInfo h2 {
-  font-size: 2.5rem;
+/* Info column */
+.infoCol h2 {
+  font-size: 1.6rem;
   margin-bottom: 1.5rem;
 }
 
-.description {
-  color: var(--muted);
-  font-size: 1.1rem;
-  margin-bottom: 3rem;
-}
-
-.infoList {
+.officeCard {
   display: flex;
-  flex-direction: column;
-  gap: 2rem;
-  margin-bottom: 4rem;
-}
-
-.infoItem {
-  display: flex;
-  gap: 1.5rem;
+  gap: 1.25rem;
   align-items: flex-start;
+  background: var(--surface);
+  border-radius: 16px;
+  padding: 1.5rem;
+  border: 1px solid var(--border);
+  margin-bottom: 1rem;
 }
 
-.icon {
-  width: 50px;
-  height: 50px;
-  background-color: var(--primary-light);
-  color: var(--primary);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  border-radius: 12px;
+.officeFlag {
+  font-size: 2rem;
   flex-shrink: 0;
 }
 
-.infoItem h4 {
+.officeCard h4 {
+  font-size: 0.95rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
   color: var(--secondary);
-  margin-bottom: 0.25rem;
 }
 
-.infoItem p {
+.officeDetail {
+  display: flex;
+  gap: 0.5rem;
+  align-items: flex-start;
+  margin-bottom: 0.4rem;
+}
+
+.detailIcon {
+  color: var(--primary);
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+
+.officeDetail p {
+  font-size: 0.85rem;
   color: var(--muted);
+  line-height: 1.6;
 }
 
-.socialCard {
-  background-color: #f9f9f9;
-  padding: 2rem;
-  border-radius: 20px;
+.officeDetail a {
+  font-size: 0.85rem;
+  color: var(--primary);
+  font-weight: 500;
 }
 
-.socialCard h4 {
-  margin-bottom: 1.5rem;
+.emailsTitle {
+  font-size: 1rem;
+  font-weight: 700;
+  margin: 1.75rem 0 1rem;
 }
 
-.socialLinks {
+.emailGrid {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  margin-bottom: 2rem;
+}
+
+.emailCard {
   display: flex;
   gap: 1rem;
-}
-
-.socialIcon {
-  width: 40px;
-  height: 40px;
-  background-color: white;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  border-radius: 50%;
-  font-weight: 700;
-  font-size: 0.8rem;
-  box-shadow: var(--shadow);
-  cursor: pointer;
+  align-items: flex-start;
+  background: var(--surface);
+  border-radius: 12px;
+  padding: 1rem;
+  border: 1px solid var(--border);
   transition: var(--transition);
 }
 
-.socialIcon:hover {
-  background-color: var(--primary);
-  color: white;
-  transform: translateY(-3px);
+.emailCard:hover {
+  border-color: var(--primary);
+  box-shadow: var(--shadow-card);
 }
 
+.emailIcon {
+  width: 38px;
+  height: 38px;
+  background: var(--primary-light);
+  color: var(--primary);
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.emailLabel {
+  display: block;
+  font-size: 0.75rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--muted);
+  margin-bottom: 0.15rem;
+}
+
+.emailAddress {
+  font-size: 0.88rem;
+  color: var(--primary);
+  font-weight: 500;
+  transition: var(--transition);
+}
+
+.emailAddress:hover {
+  color: var(--primary-hover);
+}
+
+/* Social */
+.socialBlock h3 {
+  font-size: 1rem;
+  font-weight: 700;
+  margin-bottom: 0.75rem;
+}
+
+.socialRow {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.socialBtn {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  font-size: 0.9rem;
+  color: var(--foreground);
+  padding: 0.6rem 0.75rem;
+  border-radius: 10px;
+  transition: var(--transition);
+  border: 1px solid transparent;
+}
+
+.socialBtn:hover {
+  background: var(--primary-light);
+  color: var(--primary);
+  border-color: rgba(21, 101, 192, 0.15);
+}
+
+/* Form */
 .formSection {
-  background-color: white;
+  background: white;
   padding: 3rem;
   border-radius: 20px;
   box-shadow: var(--shadow-lg);
+  border: 1px solid var(--border);
+}
+
+.formSection h2 {
+  font-size: 1.6rem;
+  margin-bottom: 0.5rem;
+}
+
+.formDesc {
+  color: var(--muted);
+  font-size: 0.9rem;
+  margin-bottom: 2rem;
 }
 
 .form {
   display: flex;
   flex-direction: column;
-  gap: 1.5rem;
+  gap: 1.25rem;
 }
 
 .row {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 1.5rem;
+  gap: 1.25rem;
 }
 
 .inputGroup {
@@ -135,47 +220,49 @@
 
 .inputGroup label {
   font-weight: 600;
-  font-size: 0.9rem;
+  font-size: 0.875rem;
+  color: var(--secondary);
 }
 
-.inputGroup input, .inputGroup textarea {
-  padding: 1rem;
-  border: 1px solid var(--border);
+.inputGroup input,
+.inputGroup textarea,
+.inputGroup select {
+  padding: 0.875rem 1rem;
+  border: 1.5px solid var(--border);
   border-radius: 10px;
   font-family: inherit;
-  font-size: 1rem;
+  font-size: 0.95rem;
   outline: none;
+  transition: var(--transition);
+  color: var(--foreground);
+  background: var(--surface);
 }
 
-.inputGroup input:focus, .inputGroup textarea:focus {
+.inputGroup input:focus,
+.inputGroup textarea:focus,
+.inputGroup select:focus {
   border-color: var(--primary);
-}
-
-.mapSection {
-  height: 400px;
-  width: 100%;
-  background-color: #eee;
-}
-
-.mapPlaceholder {
-  width: 100%;
-  height: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: var(--muted);
-  font-weight: 600;
+  background: white;
+  box-shadow: 0 0 0 3px rgba(21, 101, 192, 0.1);
 }
 
 @media (max-width: 992px) {
   .grid {
     grid-template-columns: 1fr;
-    gap: 4rem;
   }
 }
 
 @media (max-width: 600px) {
   .row {
     grid-template-columns: 1fr;
+  }
+
+  .formSection {
+    padding: 2rem;
+  }
+
+  .socialRow {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
   }
 }
