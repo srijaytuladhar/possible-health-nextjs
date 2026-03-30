@@ -1,14 +1,14 @@
 .container { min-height: 100vh; }
 
 .header {
-  background: linear-gradient(135deg, var(--secondary), #0D2B6B);
+  background: linear-gradient(135deg, var(--secondary), #4A0D2A);
   color: white;
   padding: 10rem 0 5rem;
   text-align: center;
 }
 
 .title { font-size: clamp(2.5rem, 6vw, 4rem); color: white; margin-bottom: 1rem; }
-.highlight { color: #90CAF9; }
+.highlight { color: #F48FB1; }
 .subtitle { font-size: 1.1rem; opacity: 0.8; max-width: 600px; margin: 0 auto; line-height: 1.7; }
 
 .teamSection { background: var(--surface); }
@@ -44,7 +44,7 @@
   width: 68px;
   height: 68px;
   border-radius: 50%;
-  background: linear-gradient(135deg, var(--primary), #42A5F5);
+  background: linear-gradient(135deg, var(--primary), #F06292);
   color: white;
   display: flex;
   align-items: center;

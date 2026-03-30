@@ -1,14 +1,14 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@300;400;500;600;700;800&display=swap');
 
 :root {
-  /* Possible Health Color Palette — Blue/Green NGO */
-  --primary: #1565C0;
-  --primary-hover: #0D47A1;
-  --primary-light: #E3F2FD;
-  --accent: #2E7D32;
-  --accent-light: #E8F5E9;
-  --secondary: #1A2744;
-  --teal: #00838F;
+  /* Possible Health Color Palette — Pink NGO */
+  --primary: #F06292;
+  --primary-hover: #EC407A;
+  --primary-light: #FCE4EC;
+  --accent: #F48FB1;
+  --accent-light: #FCE4EC;
+  --secondary: #3D1B3D;
+  --teal: #AD1457;
 
   /* Background & Foreground */
   --background: #FFFFFF;
@@ -23,9 +23,9 @@
 
   /* Transitions & Effects */
   --transition: all 0.3s ease;
-  --shadow: 0 4px 6px -1px rgba(21, 101, 192, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
-  --shadow-lg: 0 10px 25px -5px rgba(21, 101, 192, 0.15), 0 4px 10px -2px rgba(0, 0, 0, 0.05);
-  --shadow-card: 0 2px 20px rgba(21, 101, 192, 0.08);
+  --shadow: 0 4px 6px -1px rgba(240, 98, 146, 0.08), 0 2px 4px -1px rgba(0, 0, 0, 0.05);
+  --shadow-lg: 0 10px 25px -5px rgba(240, 98, 146, 0.12), 0 4px 10px -2px rgba(0, 0, 0, 0.04);
+  --shadow-card: 0 2px 20px rgba(240, 98, 146, 0.06);
 
   /* Layout */
   --header-height: 80px;
@@ -139,15 +139,15 @@ img {
 }
 
 .btn-primary {
-  background: linear-gradient(135deg, var(--primary), #1976D2);
+  background: linear-gradient(135deg, var(--primary), #EC407A);
   color: white;
-  box-shadow: 0 4px 15px rgba(21, 101, 192, 0.3);
+  box-shadow: 0 4px 15px rgba(240, 98, 146, 0.25);
 }
 
 .btn-primary:hover {
   background: linear-gradient(135deg, var(--primary-hover), var(--primary));
   transform: translateY(-2px);
-  box-shadow: 0 6px 20px rgba(21, 101, 192, 0.4);
+  box-shadow: 0 6px 20px rgba(240, 98, 146, 0.35);
 }
 
 .btn-outline {

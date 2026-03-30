@@ -12,7 +12,6 @@
 }
 
 /* Brand column */
-.info {}
 
 .logo {
   display: flex;
@@ -25,7 +24,7 @@
 }
 
 .logoAccent {
-  color: #90CAF9;
+  color: #F48FB1;
 }
 
 .logoSub {
@@ -105,7 +104,7 @@
 }
 
 .links ul li a:hover {
-  color: #90CAF9;
+  color: #F48FB1;
   gap: 0.75rem;
 }
 
@@ -149,7 +148,7 @@
 
 .emailItem a {
   display: block;
-  color: #90CAF9;
+  color: #F48FB1;
   font-size: 0.82rem;
   transition: var(--transition);
 }
@@ -196,7 +195,7 @@
 }
 
 .form input:focus {
-  border-color: rgba(144, 202, 249, 0.5);
+  border-color: rgba(240, 98, 146, 0.4);
   background: rgba(255,255,255,0.1);
 }
 

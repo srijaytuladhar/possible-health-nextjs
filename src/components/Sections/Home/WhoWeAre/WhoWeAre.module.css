@@ -9,7 +9,7 @@
   align-items: center;
 }
 
-.imageCol {}
+/* Image column */
 
 .imageWrapper {
   position: relative;
@@ -70,7 +70,7 @@
   border-radius: 50px;
   font-size: 0.875rem;
   font-weight: 500;
-  border: 1px solid rgba(21, 101, 192, 0.15);
+  border: 1px solid rgba(240, 98, 146, 0.12);
   transition: var(--transition);
 }
 

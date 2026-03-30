@@ -3,7 +3,7 @@
 }
 
 .header {
-  background: linear-gradient(135deg, var(--secondary), #0D2B6B);
+  background: linear-gradient(135deg, var(--secondary), #4A0D2A);
   color: white;
   padding: 10rem 0 5rem;
   text-align: center;
@@ -16,7 +16,7 @@
 }
 
 .highlight {
-  color: #90CAF9;
+  color: #F48FB1;
 }
 
 .subtitle {
@@ -102,7 +102,7 @@
   left: 0;
   right: 0;
   height: 4px;
-  background: linear-gradient(90deg, var(--primary), #42A5F5);
+  background: linear-gradient(90deg, var(--primary), #F06292);
 }
 
 .vmAccent::before {

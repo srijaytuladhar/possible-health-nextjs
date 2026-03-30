@@ -3,7 +3,7 @@
 }
 
 .header {
-  background: linear-gradient(135deg, var(--secondary), #0D2B6B);
+  background: linear-gradient(135deg, var(--secondary), #4A0D2A);
   color: white;
   padding: 10rem 0 5rem;
   text-align: center;
@@ -16,7 +16,7 @@
 }
 
 .highlight {
-  color: #90CAF9;
+  color: #F48FB1;
 }
 
 .subtitle {
@@ -177,7 +177,7 @@
 .socialBtn:hover {
   background: var(--primary-light);
   color: var(--primary);
-  border-color: rgba(21, 101, 192, 0.15);
+  border-color: rgba(240, 98, 146, 0.12);
 }
 
 /* Form */
@@ -243,7 +243,7 @@
 .inputGroup select:focus {
   border-color: var(--primary);
   background: white;
-  box-shadow: 0 0 0 3px rgba(21, 101, 192, 0.1);
+  box-shadow: 0 0 0 3px rgba(240, 98, 146, 0.08);
 }
 
 @media (max-width: 992px) {

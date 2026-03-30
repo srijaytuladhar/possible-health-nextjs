@@ -4,7 +4,7 @@
 
 /* Header */
 .header {
-  background: linear-gradient(135deg, var(--secondary) 0%, #0D2B6B 100%);
+  background: linear-gradient(135deg, var(--secondary) 0%, #4A0D2A 100%);
   color: white;
   padding: 10rem 0 5rem;
   text-align: center;
@@ -19,7 +19,7 @@
 .tagline {
   font-size: 1.25rem;
   font-weight: 700;
-  color: #90CAF9;
+  color: #F48FB1;
   letter-spacing: 0.15em;
   margin-bottom: 1rem;
 }
@@ -234,7 +234,7 @@
   width: 44px;
   height: 44px;
   border-radius: 50%;
-  background: linear-gradient(135deg, var(--primary), #42A5F5);
+  background: linear-gradient(135deg, var(--primary), #F06292);
   color: white;
   display: flex;
   align-items: center;

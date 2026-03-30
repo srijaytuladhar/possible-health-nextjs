@@ -3,7 +3,7 @@
 }
 
 .header {
-  background: linear-gradient(135deg, var(--secondary) 0%, #0D2B6B 100%);
+  background: linear-gradient(135deg, var(--secondary) 0%, #4A0D2A 100%);
   color: white;
   padding: 10rem 0 5rem;
   text-align: center;
@@ -30,7 +30,7 @@
 }
 
 .highlight {
-  color: #90CAF9;
+  color: #F48FB1;
 }
 
 .subtitle {
@@ -65,7 +65,7 @@
 .card:hover {
   transform: translateY(-4px);
   box-shadow: var(--shadow-lg);
-  border-color: rgba(21, 101, 192, 0.2);
+  border-color: rgba(240, 98, 146, 0.15);
 }
 
 .cardTop {
